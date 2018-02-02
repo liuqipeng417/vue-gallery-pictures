@@ -1,6 +1,6 @@
 # vue-gallery-pictures
 
-这个组件实际上是对 [vue-gallery-layout](https://github.com/liuqipeng417/vue-gallery-pictures) 的封装，专门用于图片画廊的展示
+这个组件实际上是对 [vue-gallery-layout](https://github.com/liuqipeng417/vue-gallery-layout) 的封装，专门用于图片画廊的展示
 
 ## 例子
 
