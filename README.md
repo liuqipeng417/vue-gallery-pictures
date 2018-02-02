@@ -8,17 +8,16 @@
 - 每个 box 等比拉伸
 - box 在水平方向将占满每行，无多余空白
 - 每行的高度保持相同，底部对齐
+- 自动加载图片，更新图片状态
 - 画廊样式可自定义
 
 PS: 自适应指：高宽均不可控
 
 ## 例子
 
-[JSbin 例子](http://jsbin.com/gucahis/1/edit?html,css,js,output)
-
 ![例子](https://raw.githubusercontent.com/liuqipeng417/vue-gallery-pictures/master/examples/gallery-pictures-demo.gif)
 
-另可参考 example 文件夹的 gallery-pictures-example.html
+另可参考 example 文件夹的 [gallery-pictures-example.html](https://raw.githubusercontent.com/liuqipeng417/vue-gallery-pictures/master/examples/gallery-pictures-example.html)
 
 ## 安装
 
@@ -72,6 +71,9 @@ Broswer 引入(文件在 dist 文件夹下)
       lastLineMode="origin"
       @loaded="loaded"
       @error="error">
+      <template>
+        <span></span>
+      </template>
     </gallery-layout>
   </div>
 </template>

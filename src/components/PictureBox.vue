@@ -4,6 +4,7 @@
       v-show="!loading && !error"
       :src="actualSrc"
       class="gallery-pic-box-img"/>
+    <slot></slot>
   </div>
 </template>
 

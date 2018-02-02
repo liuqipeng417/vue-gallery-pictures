@@ -6,15 +6,16 @@
     :items="items"
     :box-init-ratio="boxInitRatio"
     :box-container-class="boxContainerClass">
-      <picture-box
-        slot-scope="scope"
-        :src="scope.item.src"
-        :loading.sync="scope.item.loading"
-        :error.sync="scope.item.error"
-        @error="$emit('error', scope.item, $event)"
-        @loaded="$emit('loaded', scope.item)">
+      <template slot-scope="scope">
+        <picture-box
+          :src="scope.item.src"
+          :loading.sync="scope.item.loading"
+          :error.sync="scope.item.error"
+          @error="$emit('error', scope.item, $event)"
+          @loaded="$emit('loaded', scope.item)">
+        </picture-box>
         <slot :item="scope.item"></slot>
-      </picture-box>
+      </template>
   </gallery-layout>
 </template>
 

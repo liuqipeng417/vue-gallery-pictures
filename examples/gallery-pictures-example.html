@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue Gallery Layout Example</title>
+  <title>Vue Gallery Pictures Example</title>
   <style>
     .container-class {
       margin: 4px;
@@ -19,6 +19,10 @@
           last-line-mode="origin"
           @loaded="loaded"
           @error="error">
+          <template slot-scope="scope">
+            <span v-show="scope.item.error">error</span>
+            <span v-show="scope.item.loading && !scope.item.error">loading</span>
+          </template>
         </gallery-pictures>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
@@ -41,10 +45,10 @@
 
           methods: {
             loaded(item) {
-              console.log(item.loading);
+              // console.log(item.loading);
             },
             error(item, e) {
-              console.log(item.error, e);
+              // console.log(item.error, e);
             }
           },
 

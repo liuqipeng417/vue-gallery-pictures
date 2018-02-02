@@ -847,6 +847,7 @@ module.exports.f = function (C) {
 //
 //
 //
+//
 
 
 
@@ -958,6 +959,7 @@ module.exports.f = function (C) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 
+//
 //
 //
 //
@@ -2751,20 +2753,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "gallery-pic-box-container" }, [
-    _c("img", {
-      directives: [
-        {
-          name: "show",
-          rawName: "v-show",
-          value: !_vm.loading && !_vm.error,
-          expression: "!loading && !error"
-        }
-      ],
-      staticClass: "gallery-pic-box-img",
-      attrs: { src: _vm.actualSrc }
-    })
-  ])
+  return _c(
+    "div",
+    { staticClass: "gallery-pic-box-container" },
+    [
+      _c("img", {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: !_vm.loading && !_vm.error,
+            expression: "!loading && !error"
+          }
+        ],
+        staticClass: "gallery-pic-box-img",
+        attrs: { src: _vm.actualSrc }
+      }),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2799,9 +2808,8 @@ var render = function() {
       {
         key: "default",
         fn: function(scope) {
-          return _c(
-            "picture-box",
-            {
+          return [
+            _c("picture-box", {
               attrs: {
                 src: scope.item.src,
                 loading: scope.item.loading,
@@ -2821,10 +2829,10 @@ var render = function() {
                   _vm.$emit("loaded", scope.item)
                 }
               }
-            },
-            [_vm._t("default", null, { item: scope.item })],
-            2
-          )
+            }),
+            _vm._v(" "),
+            _vm._t("default", null, { item: scope.item })
+          ]
         }
       }
     ])
