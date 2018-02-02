@@ -11,8 +11,8 @@
         :src="scope.item.src"
         :loading.sync="scope.item.loading"
         :error.sync="scope.item.error"
-        @error="$emit('error', scope.item)"
-        @loaded="$emit('loader', scope.item)">
+        @error="$emit('error', scope.item, $event)"
+        @loaded="$emit('loaded', scope.item)">
         <slot :item="scope.item"></slot>
       </picture-box>
   </gallery-layout>

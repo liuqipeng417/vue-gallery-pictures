@@ -1025,7 +1025,7 @@ module.exports.f = function (C) {
         };
 
         image.onerror = function (e) {
-          reject(e);
+          reject(new Error('Load Picture Error - ' + src));
         };
 
         image.src = src;
@@ -1524,6 +1524,7 @@ __WEBPACK_IMPORTED_MODULE_0__component_Layout_vue__["a" /* default */].install =
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__component_Layout_vue__["a" /* default */]);
+
 
 /***/ }),
 /* 47 */
@@ -2814,10 +2815,10 @@ var render = function() {
                   _vm.$set(scope.item, "error", $event)
                 },
                 error: function($event) {
-                  _vm.$emit("error", scope.item)
+                  _vm.$emit("error", scope.item, $event)
                 },
                 loaded: function($event) {
-                  _vm.$emit("loader", scope.item)
+                  _vm.$emit("loaded", scope.item)
                 }
               }
             },

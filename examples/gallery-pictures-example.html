@@ -12,42 +12,55 @@
   </style>
 </head>
 <body>
-  <div id="app">
-    <gallery-pictures
-      :items="items"
-      :box-container-class="boxContainerClass"
-      last-line-mode="origin"
-      :last-line-blank-min-width="200">
-    </gallery-pictures>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
-  <script src="../dist/vue-gallery-pictures.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      components: {
-        GalleryPictures
-      },
-      data() {
-        return {
-          items: [],
-          boxContainerClass: 'container-class'
-        };
-      },
-      created() {
-        const basePath = 'https://xieranmaya.github.io/images/cats';
-        axios.get(`${basePath}/cats.json`).then((res) => {
-          res.data.forEach((item) => {
-            item.src = basePath + '/' + item.url;
-            item.loading = true;
-            item.error = false;
-          });
+    <div id="app">
+        <gallery-pictures
+          :items="items"
+          :box-container-class="boxContainerClass"
+          last-line-mode="origin"
+          @loaded="loaded"
+          @error="error">
+        </gallery-pictures>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+      <script src="../dist/vue-gallery-pictures.js"></script>
+      <script>
+        new Vue({
+          el: '#app',
 
-          this.items = res.data;
+          components: {
+            GalleryPictures
+          },
+
+          data() {
+            return {
+              items: [],
+              boxContainerClass: 'container-class'
+            };
+          },
+
+          methods: {
+            loaded(item) {
+              console.log(item.loading);
+            },
+            error(item, e) {
+              console.log(item.error, e);
+            }
+          },
+
+          created() {
+            const basePath = 'https://xieranmaya.github.io/images/cats';
+            axios.get(`${basePath}/cats.json`).then((res) => {
+              res.data.forEach((item) => {
+                item.src = basePath + '/' + item.url;
+                item.loading = true;
+                item.error = false;
+              });
+
+              this.items = res.data;
+            });
+          }
         });
-      }
-    });
-  </script>
+      </script>
 </body>
 </html>

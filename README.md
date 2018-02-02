@@ -69,7 +69,9 @@ Broswer 引入(文件在 dist 文件夹下)
       :items="items"
       :box-container-class="boxContainerClass"
       :box-init-ratio="boxInitRatio"
-      lastLineMode="origin">
+      lastLineMode="origin"
+      @loaded="loaded"
+      @error="error">
     </gallery-layout>
   </div>
 </template>
@@ -103,6 +105,11 @@ export default {
       boxContainerClass: 'box-container-margin',
       boxInitRatio: 100
     }
+  },
+
+  methods: {
+    loaded(item) {},
+    error(item, error) {}
   }
 }
 </script>
@@ -139,8 +146,8 @@ export default {
 
 ## events
 
-- loaded
-- error
+- loaded(item)
+- error(item, error)
 
 ## LICENSE
 

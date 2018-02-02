@@ -63,7 +63,7 @@
           }
 
           image.onerror = (e) => {
-            reject(e);
+            reject(new Error(`Load Picture Error - ${src}`));
           }
 
           image.src = src;
