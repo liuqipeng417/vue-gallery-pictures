@@ -1,6 +1,16 @@
 # vue-gallery-pictures
+自适应画廊组件
 
 这个组件实际上是对 [vue-gallery-layout](https://github.com/liuqipeng417/vue-gallery-layout) 的封装，专门用于图片画廊的展示
+
+## 特点
+
+- 每个 box 等比拉伸
+- box 在水平方向将占满每行，无多余空白
+- 每行的高度保持相同，底部对齐
+- 画廊样式可自定义
+
+PS: 自适应指：高宽均不可控
 
 ## 例子
 
