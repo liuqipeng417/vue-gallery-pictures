@@ -1,4 +1,4 @@
-# vue-gallery-pictures
+# vue-gallery-pictures [![npm package](https://img.shields.io/npm/v/vue-gallery-pictures.svg)](https://www.npmjs.com/package/vue-gallery-pictures)
 自适应画廊组件
 
 这个组件实际上是对 [vue-gallery-layout](https://github.com/liuqipeng417/vue-gallery-layout) 的封装，专门用于图片画廊的展示
