@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="app">
-        <gallery-pictures
+        <vue-gallery-pictures
           :items="items"
           :box-container-class="boxContainerClass"
           last-line-mode="origin"
@@ -23,7 +23,7 @@
             <span v-show="scope.item.error">error</span>
             <span v-show="scope.item.loading && !scope.item.error">loading</span>
           </template>
-        </gallery-pictures>
+        </vue-gallery-pictures>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
