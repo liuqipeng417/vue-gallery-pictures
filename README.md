@@ -6,7 +6,7 @@
 
 [例子](http://jsbin.com/gucahis/1/edit?html,css,js,output)
 
-![例子](https://kss.ksyun.com/wpsconfig/gallery-pictures-demo-3-iloveimg-compressed.gif)
+![例子](https://raw.githubusercontent.com/liuqipeng417/vue-gallery-layout/master/examples/gallery-pictures-demo.gif)
 
 ## 安装
 
@@ -35,10 +35,10 @@ import Vue from 'vue';
 Vue.use(VueGalleryPictures);
 ```
 
-Broswer 引入
+Broswer 引入(文件在 dist 文件夹下)
 ```
 // 全局暴露变量 GalleryPictures
-<script src="https://img1.pcfg.cache.wpscdn.cn/ks3_3772f0f0614c9204de493cc335dedd12/vue-gallery-pictures.min.js"></script>
+<script src="../dist/vue-gallery-pictures.js></script>
 <script>
   new Vue({
     el: '#app',
