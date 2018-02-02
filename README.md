@@ -6,7 +6,7 @@
 
 [例子](http://jsbin.com/gucahis/1/edit?html,css,js,output)
 
-![例子](https://raw.githubusercontent.com/liuqipeng417/vue-gallery-layout/master/examples/gallery-pictures-demo.gif)
+![例子](https://raw.githubusercontent.com/liuqipeng417/vue-gallery-pictures/master/examples/gallery-pictures-demo.gif)
 
 ## 安装
 
