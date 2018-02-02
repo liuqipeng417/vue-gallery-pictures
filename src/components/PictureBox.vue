@@ -43,7 +43,7 @@
 
     methods: {
       loadImage() {
-        this.loading = true;
+        this.$emit('update:loading', true);
         this.actualSrc = '';
         this.imageLoader(this.src).then((res) => {
           this.$emit('update:loading', false);

@@ -1,6 +1,6 @@
 {
   "name": "vue-gallery-pictures",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Responsive Pictures Gallery",
   "main": "./dist/vue-gallery-pictures.js",
   "module": "./src/index.js",

@@ -1006,7 +1006,7 @@ module.exports.f = function (C) {
     loadImage: function loadImage() {
       var _this = this;
 
-      this.loading = true;
+      this.$emit('update:loading', true);
       this.actualSrc = '';
       this.imageLoader(this.src).then(function (res) {
         _this.$emit('update:loading', false);
