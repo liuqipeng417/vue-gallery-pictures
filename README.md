@@ -6,7 +6,7 @@
 
 [例子](http://jsbin.com/gucahis/1/edit?html,css,js,output)
 
-![例子](https://kss.ksyun.com/wpsconfig/gallery-pictures-demo-1.gif)
+![例子](https://kss.ksyun.com/wpsconfig/gallery-pictures-demo-3-iloveimg-compressed.gif)
 
 ## 安装
 
