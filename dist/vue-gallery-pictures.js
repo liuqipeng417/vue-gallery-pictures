@@ -1,4 +1,4 @@
-var GalleryPictures =
+var VueGalleryPictures =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

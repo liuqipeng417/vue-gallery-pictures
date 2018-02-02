@@ -48,7 +48,7 @@ Vue.use(VueGalleryPictures);
 
 Broswer 引入(文件在 dist 文件夹下)
 ```
-// 全局暴露变量 GalleryPictures
+// 全局暴露变量 VueGalleryPictures
 <script src="../dist/vue-gallery-pictures.js></script>
 <script>
   new Vue({
